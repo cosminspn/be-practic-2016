@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>ro.fiipractic</groupId>
+	<artifactId>fii-practic-master</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>FII Practic 2016</name>
+	<description>Master Project for FII Practic 2016</description>
+
+	<inceptionYear>2016</inceptionYear>
+
+	<contributors>
+		<contributor>
+			<name>Anca Zavata</name>
+			<email>anca.zavate@tss-yonder.com</email>
+			<organization>TSS-Yonder</organization>
+			<organizationUrl>http://tss-yonder.com/</organizationUrl>
+		</contributor>
+		<contributor>
+			<name>Cosmin Spinu</name>
+			<email>cosmin.spinu@tss-yonder.com</email>
+			<organization>TSS-Yonder</organization>
+			<organizationUrl>http://tss-yonder.com/</organizationUrl>
+		</contributor>
+		<contributor>
+			<name>Alexandru Pascariu</name>
+			<email>alexandru.pascariu@tss-yonder.com</email>
+			<organization>TSS-Yonder</organization>
+			<organizationUrl>http://tss-yonder.com/</organizationUrl>
+		</contributor>
+	</contributors>
+
+	<modules>
+		<module>fii-practic-commons</module>
+		<module>fii-practic-core</module>
+		<module>fii-practic-rest</module>
+	</modules>
+
+	<properties>
+		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+		<java.version>1.8</java.version>
+	</properties>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Maven compiler plugin START -->
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+				<!-- Maven compiler plugin END -->
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
