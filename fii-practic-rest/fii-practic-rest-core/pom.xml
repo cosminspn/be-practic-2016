@@ -2,9 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fii-practic-rest-core</groupId>
+	<parent>
+		<groupId>ro.fiipractic</groupId>
+		<artifactId>fii-practic-rest</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
 	<artifactId>fii-practic-rest-core</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>REST Core FII Practic 2016</name>
