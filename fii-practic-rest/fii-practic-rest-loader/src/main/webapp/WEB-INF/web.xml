@@ -5,7 +5,7 @@
 
 	<display-name>FII Practic 2016 REST LOADER</display-name>
 
-	<!-- <context-param>
+	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:/spring-config/spring-root.xml</param-value>
 	</context-param>
@@ -59,16 +59,4 @@
 		<filter-name>CORS</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
-	START spring security
-	<filter>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy
-		</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-	END spring security -->
 </web-app>

@@ -7,7 +7,7 @@
 		<artifactId>fii-practic-rest</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>fii-practic-rest-core</artifactId>
 	<packaging>jar</packaging>
 
@@ -15,4 +15,42 @@
 	<description>Core Project for FII Practic 2016 REST</description>
 
 	<inceptionYear>2016</inceptionYear>
+
+	<dependencies>
+		<!-- INTERNAL Dependencies START -->
+		<dependency>
+			<groupId>ro.fiipractic</groupId>
+			<artifactId>fii-practic-core</artifactId>
+		</dependency>
+		<!-- INTERNAL Dependencies END -->
+
+		<!-- SPRING Dependencies START -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		<!-- SPRING Dependencies END -->
+
+		<!-- RESTEASY Dependencies START -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-spring</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.jaxrs</groupId>
+			<artifactId>jackson-jaxrs-json-provider</artifactId>
+		</dependency>
+		<!-- RESTEASY Dependencies END -->
+
+		<!-- JAVAX SERVLET Dependencies START -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<!-- JAVAX SERVLET Dependencies END -->
+	</dependencies>
 </project>

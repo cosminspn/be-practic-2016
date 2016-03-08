@@ -19,4 +19,43 @@
 		<module>fii-practic-rest-core</module>
 		<module>fii-practic-rest-loader</module>
 	</modules>
+
+	<properties>
+		<resteasy.version>3.0.16.Final</resteasy.version>
+		<fasterxml.version>2.7.2</fasterxml.version>
+		<cors.filter.version>2.5</cors.filter.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- INTERNAL Dependencies START -->
+			<dependency>
+				<groupId>ro.fiipractic</groupId>
+				<artifactId>fii-practic-core</artifactId>
+				<version>${project.parent.version}</version>
+			</dependency>
+			<!-- INTERNAL Dependencies END -->
+
+			<!-- RESTEASY Dependencies START -->
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-spring</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.jaxrs</groupId>
+				<artifactId>jackson-jaxrs-json-provider</artifactId>
+				<version>${fasterxml.version}</version>
+			</dependency>
+			<!-- RESTEASY Dependencies END -->
+
+			<!-- CORS Filter Dependencies START -->
+			<dependency>
+				<groupId>com.thetransactioncompany</groupId>
+				<artifactId>cors-filter</artifactId>
+				<version>${cors.filter.version}</version>
+			</dependency>
+			<!-- CORS Filter Dependencies END -->
+		</dependencies>
+	</dependencyManagement>
 </project>

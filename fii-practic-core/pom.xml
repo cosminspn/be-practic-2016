@@ -23,6 +23,23 @@
 			<version>${project.parent.version}</version>
 		</dependency>
 		<!-- INTERNAL Dependencies END -->
-	</dependencies>
 
+		<!-- HIBERNATE Dependencies START -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+		<!-- HIBERNATE Dependencies END -->
+
+		<!-- SPRING Dependencies START -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<!-- SPRING Dependencies END -->
+	</dependencies>
 </project>
