@@ -4,6 +4,8 @@
 	version="2.1">
 	<persistence-unit name="fii-practic" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>ro.fiipractic.core.entity.Grupa</class>
+		<class>ro.fiipractic.core.base.BaseEntity</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 
 		<properties>
