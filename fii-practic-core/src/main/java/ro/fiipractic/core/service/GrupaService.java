@@ -1,4 +1,4 @@
-package ro.fiipractic.core.repository;
+package ro.fiipractic.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
