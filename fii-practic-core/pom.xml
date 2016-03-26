@@ -41,5 +41,11 @@
 			<artifactId>spring-orm</artifactId>
 		</dependency>
 		<!-- SPRING Dependencies END -->
+		<dependency>
+		<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+		</dependency>
+		
 	</dependencies>
 </project>

@@ -19,4 +19,6 @@ public interface GrupaDAO extends AbstractDAO {
 	 * @return the created group.
 	 */
 	public Grupa create(Grupa grupa);
+
+	public Grupa getGrupa(Long id);
 }

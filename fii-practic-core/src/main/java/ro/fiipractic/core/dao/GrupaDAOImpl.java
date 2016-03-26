@@ -41,4 +41,9 @@ public class GrupaDAOImpl implements GrupaDAO {
 		getCurrentSession().save(grupa);
 		return grupa;
 	}
+
+	@Override
+	public Grupa getGrupa(Long id) {
+		return getCurrentSession().get(Grupa.class, id);
+	}
 }
