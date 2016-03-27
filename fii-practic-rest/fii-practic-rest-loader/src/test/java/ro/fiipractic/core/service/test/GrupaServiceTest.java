@@ -1,9 +1,6 @@
-package ro.fiipractic.core.dao.test;
+package ro.fiipractic.core.service.test;
 
 import static org.junit.Assert.assertNotNull;
-
-import javax.inject.Inject;
-import javax.inject.Named;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,9 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import ro.fiipractic.core.base.ConfigBean;
 import ro.fiipractic.core.dao.GrupaDAO;
-import ro.fiipractic.core.dao.GrupaDAOImpl;
 import ro.fiipractic.core.entity.Grupa;
-import ro.fiipractic.core.repository.GrupaService;
+import ro.fiipractic.core.service.GrupaService;
 
 /**
  * JUnit test for {@link GrupaDAO}.
@@ -27,15 +23,15 @@ import ro.fiipractic.core.repository.GrupaService;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:/spring-config/spring-root.xml")
-public class GrupaDAOTest {
+public class GrupaServiceTest {
 
-	ApplicationContext ctx = 
-		      new AnnotationConfigApplicationContext(ConfigBean.class);
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(
+			ConfigBean.class);
 
 	@Autowired
 	private GrupaDAO grupaDAO;
-	
-	@Inject
+
+	@Autowired
 	private GrupaService grupaService;
 
 	/**
@@ -47,23 +43,29 @@ public class GrupaDAOTest {
 		grupa.setNumeGrupa("FII PRACTIC 2016 - GROUP A");
 
 		grupa = grupaDAO.create(grupa);
-		
+
 		assertNotNull(grupa.getId());
 	}
-	
+
 	@Test
-	public void testCreateSpringBean(){
-		Grupa grupa =  ctx.getBean(Grupa.class);
+	public void testCreateSpringBean() {
+		Grupa grupa = ctx.getBean(Grupa.class);
 		grupa.setNumeGrupa("FII PRACTIC 2016 - GROUP B");
 
 		grupa = grupaDAO.create(grupa);
-		
+
 		assertNotNull(grupa.getId());
 	}
-	
+
 	@Test
 	public void testGetGrupa() {
-		Grupa grupa = grupaService.getGrupa(2L);
-		assertNotNull(grupa);
+		Grupa created = new Grupa();
+		created.setNumeGrupa("FII PRACTIC 2016 - GROUP C");
+		
+		created = grupaService.create(created);
+		
+		Grupa found = grupaService.getGrupa(created.getId());
+		
+		assertNotNull(found);
 	}
 }

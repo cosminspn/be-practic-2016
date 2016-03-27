@@ -1,19 +1,31 @@
 package ro.fiipractic.core.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import ro.fiipractic.core.dao.GrupaDAO;
 import ro.fiipractic.core.entity.Grupa;
 
-@Service("grupaService")
-public class GrupaService {
-	
-	@Autowired
-	GrupaDAO grupaDAO;
-	
-	public Grupa getGrupa(Long id){
-		return grupaDAO.getGrupa(id);
-	}
+/**
+ * 
+ * @author Cosmin-HP
+ * @since Mar 27, 2016
+ * @version 1.0
+ */
+public interface GrupaService {
 
+	/**
+	 * Creates a group.
+	 * 
+	 * @param grupa
+	 *            the group to be created.
+	 * @return the created group.
+	 */
+	public Grupa create(Grupa grupa);
+
+	/**
+	 * Get a group by id.
+	 * 
+	 * @author Cosmin-HP
+	 * @since Mar 27, 2016
+	 * @param id
+	 * @return
+	 */
+	public Grupa getGrupa(Long id);
 }
