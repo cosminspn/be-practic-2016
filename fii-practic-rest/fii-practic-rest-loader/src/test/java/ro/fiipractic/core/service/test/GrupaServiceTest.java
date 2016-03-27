@@ -29,9 +29,6 @@ public class GrupaServiceTest {
 			ConfigBean.class);
 
 	@Autowired
-	private GrupaDAO grupaDAO;
-
-	@Autowired
 	private GrupaService grupaService;
 
 	/**
@@ -42,7 +39,7 @@ public class GrupaServiceTest {
 		Grupa grupa = new Grupa();
 		grupa.setNumeGrupa("FII PRACTIC 2016 - GROUP A");
 
-		grupa = grupaDAO.create(grupa);
+		grupa = grupaService.create(grupa);
 
 		assertNotNull(grupa.getId());
 	}
@@ -52,7 +49,7 @@ public class GrupaServiceTest {
 		Grupa grupa = ctx.getBean(Grupa.class);
 		grupa.setNumeGrupa("FII PRACTIC 2016 - GROUP B");
 
-		grupa = grupaDAO.create(grupa);
+		grupa = grupaService.create(grupa);
 
 		assertNotNull(grupa.getId());
 	}
