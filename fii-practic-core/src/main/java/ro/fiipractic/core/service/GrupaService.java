@@ -1,9 +1,11 @@
 package ro.fiipractic.core.service;
 
+import java.util.List;
+
 import ro.fiipractic.core.entity.Grupa;
 
 /**
- * 
+ * Service for {@link Grupa}.
  * @author Cosmin-HP
  * @since Mar 27, 2016
  * @version 1.0
@@ -24,8 +26,15 @@ public interface GrupaService {
 	 * 
 	 * @author Cosmin-HP
 	 * @since Mar 27, 2016
-	 * @param id
-	 * @return
+	 * @param id the id of the group.
+	 * @return the group.
 	 */
 	public Grupa getGrupa(Long id);
+	
+	/**
+	 * Find all groups.
+	 * 
+	 * @return all groups.
+	 */
+	public List<Grupa> findAll();
 }

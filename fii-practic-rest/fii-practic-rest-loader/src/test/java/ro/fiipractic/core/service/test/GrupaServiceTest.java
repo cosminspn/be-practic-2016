@@ -25,8 +25,7 @@ import ro.fiipractic.core.service.GrupaService;
 @ContextConfiguration("classpath:/spring-config/spring-root.xml")
 public class GrupaServiceTest {
 
-	ApplicationContext ctx = new AnnotationConfigApplicationContext(
-			ConfigBean.class);
+	private ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigBean.class);
 
 	@Autowired
 	private GrupaService grupaService;
@@ -44,6 +43,9 @@ public class GrupaServiceTest {
 		assertNotNull(grupa.getId());
 	}
 
+	/**
+	 * Spring bean test.
+	 */
 	@Test
 	public void testCreateSpringBean() {
 		Grupa grupa = ctx.getBean(Grupa.class);
@@ -54,15 +56,18 @@ public class GrupaServiceTest {
 		assertNotNull(grupa.getId());
 	}
 
+	/**
+	 * Ge grupa by id test.
+	 */
 	@Test
 	public void testGetGrupa() {
 		Grupa created = new Grupa();
 		created.setNumeGrupa("FII PRACTIC 2016 - GROUP C");
-		
+
 		created = grupaService.create(created);
-		
+
 		Grupa found = grupaService.getGrupa(created.getId());
-		
+
 		assertNotNull(found);
 	}
 }

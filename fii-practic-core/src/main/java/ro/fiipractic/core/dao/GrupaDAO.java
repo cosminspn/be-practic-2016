@@ -1,5 +1,7 @@
 package ro.fiipractic.core.dao;
 
+import java.util.List;
+
 import ro.fiipractic.core.base.AbstractDAO;
 import ro.fiipractic.core.entity.Grupa;
 
@@ -20,5 +22,19 @@ public interface GrupaDAO extends AbstractDAO {
 	 */
 	public Grupa create(Grupa grupa);
 
+	/**
+	 * Search the group by id.
+	 * 
+	 * @param id
+	 *            the id of the group.
+	 * @return the group with the specified id.
+	 */
 	public Grupa getGrupa(Long id);
+
+	/**
+	 * Find all groups.
+	 * 
+	 * @return all groups.
+	 */
+	public List<Grupa> findAll();
 }

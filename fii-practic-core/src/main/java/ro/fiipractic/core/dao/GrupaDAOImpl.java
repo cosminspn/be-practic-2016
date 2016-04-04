@@ -3,6 +3,8 @@
  */
 package ro.fiipractic.core.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,5 +47,11 @@ public class GrupaDAOImpl implements GrupaDAO {
 	@Override
 	public Grupa getGrupa(Long id) {
 		return getCurrentSession().get(Grupa.class, id);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Grupa> findAll() {
+		return getCurrentSession().createCriteria(Grupa.class).list();
 	}
 }
